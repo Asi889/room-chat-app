@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ChatCord App</title>
+</head>
+
+<body>
+    <div class="max-w-[1100px] bg-white md:mx-auto mx-3 mt-10  ">
+        <header class="bg-blue-400 text-white rounded-t-lg p-4 flex items-center justify-between">
+            <h1 class="md:text-3xl text-2xl font-bold"> Chat App</h1>
+            
+            <a id="leave-btn" class=""><input class="cursor-pointer px-4 py-1 md:text-3xl text-2xl font-bold text-center mx-auto hover:text-gray-300 focus:text-gray-100" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Leave Room" /></a>
+        </header>
+        <main class="flex md:h-[576px] h-[320px]  overflow-hidden">
+            <div class=" md:block hidden w-full max-w-[350px] bg-blue-300 text-white px-5 pt-5 pb-16 overflow-y-scroll">
+               
+                <h3 class="mb-4 text-xl"><i class="fas fa-comments pr-[10px]"></i> Room Name:</h3>
+                <h2 class="text-xl bg-gray-200 p-3 mb-5 text-center text-gray-700" id="room-name"></h2>
+                <h3 class="mb-4 text-xl"><i class="fas fa-users"></i> Users</h3>
+                <ul class="px-3" id="users"></ul>
+            </div>
+            <div class="chat-messages w-full overflow-auto"></div>
+        </main>
+       
+        <div class="chat-form-container px-4 py-5 bg-blue-400">
+            <form class="flex" id="chat-form">
+                <textarea class="text-lg p-[5px] h-10 max-h-20 flex-1" name="" id="msg" cols="30" rows="10" placeholder="Enter Message" required autocomplete="off"></textarea>
+                <button class="cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto hover:text-gray-800 focus:text-gray-600"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
