@@ -6,7 +6,8 @@
   "scripts": {
     "tailwind:css": "postcss ./public/tailwind.css -o ./public/styles.css",
     "start": "npm run tailwind:css && node server",
-    "dev": "npm run tailwind:css && nodemon server"
+    "dev": "npm run tailwind:css && nodemon server",
+    "build":"npm run tailwind:css && node server"
   },
   "author": "",
   "license": "ISC",
