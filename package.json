@@ -7,7 +7,7 @@
     "tailwind:css": "postcss ./src/tailwind.css -o ./src/styles.css",
     "start": "npm run tailwind:css && node server",
     "dev": "npm run tailwind:css && nodemon server",
-    "build": "webpack"
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "webpac": "^0.0.1-security",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.8.0"
   }
 }
