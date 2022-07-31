@@ -1,0 +1,1 @@
+web: npm run tailwind:css && node server

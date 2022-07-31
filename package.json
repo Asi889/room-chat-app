@@ -7,7 +7,7 @@
     "tailwind:css": "postcss ./public/tailwind.css -o ./public/styles.css",
     "start": "npm run tailwind:css && node server",
     "dev": "npm run tailwind:css && nodemon server",
-    "build":"npm run tailwind:css && node server"
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +20,10 @@
     "redis": "^4.2.0",
     "socket.io": "^4.5.1",
     "tailwindcss": "^3.1.6"
+  },
+  "devDependencies": {
+    "webpac": "^0.0.1-security",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }
