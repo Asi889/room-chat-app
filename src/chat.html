@@ -13,26 +13,38 @@
 
 <body>
     <div class="max-w-[1100px] bg-white md:mx-auto mx-3 mt-10  ">
-        <header class="bg-blue-400 text-white rounded-t-lg p-4 flex items-center justify-between">
-            <h1 class="md:text-3xl text-2xl font-bold"> Chat App</h1>
-            
-            <a id="leave-btn" class=""><input class="cursor-pointer px-4 py-1 md:text-3xl text-2xl font-bold text-center mx-auto hover:text-gray-300 focus:text-gray-100" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Leave Room" /></a>
+        <header class="chat-header bg-[#292c35] text-white rounded-t-lg p-4 flex items-center justify-between ">
+            <h1 class="chat-header-text md:text-3xl text-xl font-bold text-[#ff9376]"> Chat App</h1>
+            <div class="flex items-center">
+                <a id="leave-btn" class=""><input class="chat-header-text cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto hover:text-gray-300 focus:text-gray-100 text-[#ff9376]" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Leave Room" /></a>
+                <div class="change-mode relative">
+                    <input type="checkbox" class="checkbox hidden" id="checkbox" name="whitemode" value="white-mode" />
+                  <label for="checkbox" class="label">
+                    <i class="fas fa-moon"></i>
+                    <i class='fas fa-sun'></i>
+                    <div class='ball'></div>
+                  </label>
+                </div>
+            </div>
         </header>
         <main class="flex md:h-[576px] h-[320px]  overflow-hidden">
-            <div class=" md:block hidden w-full max-w-[350px] bg-blue-300 text-white px-5 pt-5 pb-16 overflow-y-scroll">
+            <div class="chaters md:block hidden w-full max-w-[350px] bg-[#5b5d62] text-white px-5 pt-5 pb-16 overflow-y-scroll">
                
-                <h3 class="mb-4 text-xl"><i class="fas fa-comments pr-[10px]"></i> Room Name:</h3>
-                <h2 class="text-xl bg-gray-200 p-3 mb-5 text-center text-gray-700" id="room-name"></h2>
-                <h3 class="mb-4 text-xl"><i class="fas fa-users"></i> Users</h3>
-                <ul class="px-3" id="users"></ul>
+                <h3 class="chatbar-text mb-4 text-xl text-[#ff9376]"><i class="fas fa-comments pr-[10px] "></i> Room Name:</h3>
+                <h2 class="chatbar-text text-xl bg-gray-200 p-3 mb-5 text-center text-gray-700" id="room-name"></h2>
+                <h3 class="chatbar-text mb-4 text-xl text-[#ff9376]"><i class="fas fa-users"></i> Users</h3>
+                <ul class="chatbar-text px-3" id="users"></ul>
             </div>
             <div class="chat-messages w-full overflow-auto"></div>
         </main>
        
-        <div class="chat-form-container px-4 py-5 bg-blue-400">
-            <form class="flex  max-w-[194px] md:max-w-full bbc" id="chat-form">
-                <textarea class="text-lg p-[5px] w-full flex-1" name="" id="msg" cols="30" rows="0" placeholder="Enter Message" required autocomplete="off"></textarea>
-                <button class="cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto hover:text-gray-800 focus:text-gray-600"><i class="fas fa-paper-plane"></i> Send</button>
+        <div class="chat-form-container px-4 py-5 bg-[#292c35] chat-header">
+            <form class="flex md:max-w-full bbc" id="chat-form">
+                <div class="w-full">
+
+                    <textarea class="text-lg p-[5px] w-full flex-1" name="" id="msg" cols="30" rows="0" placeholder="Enter Message" required autocomplete="off"></textarea>
+                </div>
+                <button class="chat-send-btn cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto hover:text-gray-800 focus:text-gray-600 text-[#ff9376]"><i class="fas fa-paper-plane"></i> Send</button>
             </form>
         </div>
     </div>

@@ -16,13 +16,26 @@
 	</head>
 	<body>
 		<div class="max-w-[500px] my-20 md:mx-auto mx-2">
-			<header class=" text-center p-5 bg-blue-400 text-3xl font-bold ">
-				<h1></i> Chat App</h1>
-			</header>
-			<main class="px-10 py-7 bg-blue-300">
+			<div class="relative">
+
+				<div class="index-header text-center p-5 bg-[#292c35] text-3xl font-bold flex">
+					<h1 class="index-header-title text-[#ff9376]"></i> Chat App</h1>
+				</div>
+				
+			</div>
+
+			<div class="index-body px-10 py-7 bg-[#5b5d62] relative">
 				<form action="chat.html">
+					<div class="change-mode absolute -top-14 right-6">
+						<input type="checkbox" class="checkbox hidden" id="checkbox" name="whitemode" value="white-mode" />
+					  <label for="checkbox" class="label">
+						<i class="fas fa-moon"></i>
+						<i class='fas fa-sun'></i>
+						<div class='ball'></div>
+					  </label>
+					</div>
 					<div class=" mb-5">
-						<label class="block mt-1 text-xl" for="username">Username</label>
+						<label class="index-label block my-1 text-xl text-[#ff9376]" for="username">Username</label>
 						<input
 							type="text"
 							name="username"
@@ -33,7 +46,7 @@
 						/>
 					</div>
 					<div class=" mb-5">
-						<label class="block mt-1 text-xl" for="room">Room</label>
+						<label class="index-label block my-1 text-xl text-[#ff9376]" for="room">Room</label>
 						<select class="text-xl p-1 h-10 w-full" name="room" id="room">
 							<option value="General">General Room</option>
 							<option value="Food">Let's talk Food!</option>
@@ -43,11 +56,15 @@
 							<option value="Frisbee">Frisbee</option>
 						</select>
 					</div>
-                    <div class="w-fit mx-auto text-center bg-blue-400 rounded-3xl">
-                        <button type="submit" class=" rounded-3xl  cursor-pointer px-5 py-4 text-3xl font-bold text-center mx-auto focus:shadow-2xl hover:bg-blue-500">Join Chat</button>
+                    <div class="w-fit mx-auto text-center bg-[#292c35] rounded-3xl">
+                        <button type="submit" class=" rounded-3xl  cursor-pointer px-5 py-4 text-3xl font-bold text-center mx-auto focus:shadow-2xl hover:bg-blue-500 text-[#ff9376]">Join Chat</button>
                     </div>
 				</form>
-			</main>
+			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+		
+		<script src="/js/toggle.js"></script>
 	</body>
 </html>
