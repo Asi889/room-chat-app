@@ -563,8 +563,6 @@ video {
   max-width: 1100px;
 } .max-w-\[350px\] {
   max-width: 350px;
-} .max-w-\[194px\] {
-  max-width: 194px;
 } .max-w-\[500px\] {
   max-width: 500px;
 } .flex-1 {
@@ -645,9 +643,6 @@ video {
   text-align: center;
 } .text-end {
   text-align: end;
-} .text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 } .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -684,22 +679,13 @@ video {
 } .hover\:bg-blue-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-} .hover\:text-gray-300:hover {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-} .hover\:text-gray-800:hover {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
-} .focus\:text-gray-100:focus {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-} .focus\:text-gray-600:focus {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 } .focus\:shadow-2xl:focus {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+} .active\:text-\[\#f0ab98\]:active {
+  --tw-text-opacity: 1;
+  color: rgb(240 171 152 / var(--tw-text-opacity));
 } @media (min-width: 768px) {
 
   .md\:mx-auto {

@@ -16,7 +16,7 @@
         <header class="chat-header bg-[#292c35] text-white rounded-t-lg p-4 flex items-center justify-between ">
             <h1 class="chat-header-text md:text-3xl text-xl font-bold text-[#ff9376]"> Chat App</h1>
             <div class="flex items-center">
-                <a id="leave-btn" class=""><input class="chat-header-text cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto hover:text-gray-300 focus:text-gray-100 text-[#ff9376]" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Leave Room" /></a>
+                <a id="leave-btn" class=""><input class="chat-header-text cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto active:text-[#f0ab98] text-[#ff9376]" action="action" onclick="window.history.go(-1); return false;" type="submit" value="Leave Room" /></a>
                 <div class="change-mode relative">
                     <input type="checkbox" class="checkbox hidden" id="checkbox" name="whitemode" value="white-mode" />
                   <label for="checkbox" class="label">
@@ -44,7 +44,7 @@
 
                     <textarea class="text-lg p-[5px] w-full flex-1" name="" id="msg" cols="30" rows="0" placeholder="Enter Message" required autocomplete="off"></textarea>
                 </div>
-                <button class="chat-send-btn cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto hover:text-gray-800 focus:text-gray-600 text-[#ff9376]"><i class="fas fa-paper-plane"></i> Send</button>
+                <button class="chat-send-btn cursor-pointer px-4 py-1 md:text-3xl text-xl font-bold text-center mx-auto  active:text-[#f0ab98]  text-[#ff9376]"><i class="fas fa-paper-plane"></i> Send</button>
             </form>
         </div>
     </div>

@@ -66,6 +66,7 @@ body.dark {
 }
 .checkbox::after {
 	display: none;
+
 }
   
 .label {

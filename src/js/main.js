@@ -6,10 +6,11 @@ const chatHeader = document.querySelectorAll('.chat-header');
 const chatHeaderText = document.querySelectorAll('.chat-header-text');
 const chatinfo = document.querySelector('.chaters');
 const chatbartext = document.querySelectorAll('.chatbar-text');
-const sendbtn = document.querySelector('.chat-send-btn')
+const sendbtn = document.querySelector('.chat-send-btn');
 
 let storage = localStorage.getItem('color-mode');
 let colorMode = storage === "white-mode" ? "white-mode" : "darkMode";
+let currentUsers= [];
 
 
 
@@ -28,6 +29,7 @@ socket.emit('joinRoom', { username, room });
 
 // Get room and users
 socket.on('roomUsers', ({ room, users }) => {
+    
     outputRoomName(room);
     outputUsers(users);
 });
@@ -90,6 +92,7 @@ function outputUsers(users) {
         const li = document.createElement('li');
         li.classList.add('text-xl')
         if (colorMode === "darkMode") {
+            
             li.classList.add('text-black')
 
         } else {
@@ -108,31 +111,45 @@ function outputRoomName(room) {
 
 
 window.addEventListener('load', () => {
-    console.log("shubeeee");
     const colorMode = localStorage.getItem('color-mode');
     if (colorMode === "darkMode") {
         document.body.classList.toggle('dark');
-        // chatHeader.classList.toggle('dark');
         chatHeader.forEach(text => text.classList.toggle('dark'));
         chatHeaderText.forEach(text => text.classList.toggle('dark'));
         chatinfo.classList.toggle('dark');
         chatbartext.forEach(text => text.classList.toggle('dark'));
         sendbtn.classList.toggle('dark');
+    };
+    
+    if(!localStorage.getItem('color-mode')){
+        localStorage.setItem('color-mode', 'white-mode')
     }
-
+    
 });
 
 checkbox.addEventListener('change', () => {
-    const colorMode = localStorage.getItem('color-mode');
-    colorMode
+    let colorMode = localStorage.getItem('color-mode');
     if (colorMode === "darkMode") {
         localStorage.setItem('color-mode', "whit-mode")
+        colorMode= "white-mode"
     } else {
+        colorMode= "darkMode"
         localStorage.setItem('color-mode', "darkMode")
 
     }
+    let children = userList.childNodes;
+    console.log(colorMode);
+    children.forEach((node)=>{
+        if(colorMode === "darkMode"){
+            console.log("userList");
+            node.style.color = "black"
+            
+        }else{
+
+            node.style.color = '#ff9376';
+        }
+    })
     document.body.classList.toggle('dark');
-    // chatHeader.classList.toggle('dark');
     chatHeader.forEach(text => text.classList.toggle('dark'));
     chatHeaderText.forEach(text => text.classList.toggle('dark'));
     chatinfo.classList.toggle('dark');
